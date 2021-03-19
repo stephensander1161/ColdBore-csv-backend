@@ -8,6 +8,8 @@ var corsOptions = {
 	origin: 'http://localhost:8081'
 };
 
+global.__basedir = __dirname;
+
 app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
@@ -21,7 +23,7 @@ dotenv.config();
 
 const db = require('./app/models');
 db.sequelize.sync().then(() => {
-	console.log('Drop and re-sync db.');
+	console.log('Re-sync db.');
 });
 
 // simple route

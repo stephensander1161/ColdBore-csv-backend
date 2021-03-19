@@ -1,54 +1,60 @@
 module.exports = (sequelize, Sequelize) => {
-	const Bitcoin = sequelize.define('bitcoin', {
-		date: {
-			type: Sequelize.STRING
+	const Bitcoin = sequelize.define(
+		'bitcoin',
+		{
+			date: {
+				type: Sequelize.STRING
+			},
+			txvolume: {
+				type: Sequelize.INTEGER
+			},
+			adjustedtxvolume: {
+				type: Sequelize.INTEGER
+			},
+			txcount: {
+				type: Sequelize.INTEGER
+			},
+			marketcap: {
+				type: Sequelize.INTEGER
+			},
+			price: {
+				type: Sequelize.INTEGER
+			},
+			exchangevolume: {
+				type: Sequelize.INTEGER
+			},
+			generatedcoins: {
+				type: Sequelize.DOUBLE
+			},
+			fees: {
+				type: Sequelize.DOUBLE
+			},
+			activeaddresses: {
+				type: Sequelize.INTEGER
+			},
+			averagedifficulty: {
+				type: Sequelize.DOUBLE
+			},
+			paymentcount: {
+				type: Sequelize.INTEGER
+			},
+			mediantxvalue: {
+				type: Sequelize.INTEGER
+			},
+			medianfee: {
+				type: Sequelize.INTEGER
+			},
+			blocksize: {
+				type: Sequelize.INTEGER
+			},
+			blockcount: {
+				type: Sequelize.INTEGER
+			}
 		},
-		txVolume: {
-			type: Sequelize.DOUBLE
-		},
-		adjustedTxVolume: {
-			type: Sequelize.DOUBLE
-		},
-		txCount: {
-			type: Sequelize.DOUBLE
-		},
-		marketCap: {
-			type: Sequelize.DOUBLE
-		},
-		price: {
-			type: Sequelize.DOUBLE
-		},
-		exchangeVolume: {
-			type: Sequelize.DOUBLE
-		},
-		generatedCoins: {
-			type: Sequelize.DOUBLE
-		},
-		fees: {
-			type: Sequelize.DOUBLE
-		},
-		activeAddresses: {
-			type: Sequelize.DOUBLE
-		},
-		averageDifficulty: {
-			type: Sequelize.DOUBLE
-		},
-		paymentCount: {
-			type: Sequelize.DOUBLE
-		},
-		medianTxValue: {
-			type: Sequelize.DOUBLE
-		},
-		medianFee: {
-			type: Sequelize.DOUBLE
-		},
-		blockSize: {
-			type: Sequelize.DOUBLE
-		},
-		blockCount: {
-			type: Sequelize.DOUBLE
-		}
-	});
+		{ timestamps: false }
+	);
+
+	Bitcoin.removeAttribute('id');
 
 	return Bitcoin;
 };
