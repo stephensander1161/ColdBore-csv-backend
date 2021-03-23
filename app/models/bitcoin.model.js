@@ -5,23 +5,23 @@ module.exports = (sequelize, Sequelize) => {
 			date: {
 				type: Sequelize.STRING
 			},
-			txvolume: {
-				type: Sequelize.INTEGER
+			txvolume_usd: {
+				type: Sequelize.DOUBLE
 			},
-			adjustedtxvolume: {
-				type: Sequelize.INTEGER
+			adjustedtxvolume_usd: {
+				type: Sequelize.DOUBLE
 			},
 			txcount: {
 				type: Sequelize.INTEGER
 			},
-			marketcap: {
-				type: Sequelize.INTEGER
+			marketcap_usd: {
+				type: Sequelize.DOUBLE
 			},
-			price: {
-				type: Sequelize.INTEGER
+			price_usd: {
+				type: Sequelize.DOUBLE
 			},
-			exchangevolume: {
-				type: Sequelize.INTEGER
+			exchangevolume_usd: {
+				type: Sequelize.DOUBLE
 			},
 			generatedcoins: {
 				type: Sequelize.DOUBLE
@@ -36,13 +36,13 @@ module.exports = (sequelize, Sequelize) => {
 				type: Sequelize.DOUBLE
 			},
 			paymentcount: {
-				type: Sequelize.INTEGER
+				type: Sequelize.DOUBLE
 			},
-			mediantxvalue: {
-				type: Sequelize.INTEGER
+			mediantxvalue_usd: {
+				type: Sequelize.DOUBLE
 			},
 			medianfee: {
-				type: Sequelize.INTEGER
+				type: Sequelize.DOUBLE
 			},
 			blocksize: {
 				type: Sequelize.INTEGER
