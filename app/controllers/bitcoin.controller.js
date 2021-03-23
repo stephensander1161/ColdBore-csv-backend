@@ -15,21 +15,21 @@ exports.create = (req, res) => {
 	// Create a Bitcoin
 	const bitcoin = {
 		date: req.body.date,
-		txVolume: req.body.txVolume,
-		adjustedTxVolume: req.body.adjustedTxVolume,
-		txCount: req.body.txCount,
-		marketCap: req.body.marketCap,
-		price: req.body.price,
-		exchangeVolume: req.body.exchangeVolume,
-		generatedCoins: req.body.generatedCoins,
+		txvolume_usd: req.body.txvolume_usd,
+		adjustedtxvolume_usd: req.body.adjustedtxvolume_usd,
+		txcount: req.body.txcount,
+		marketcap_usd: req.body.marketcap_usd,
+		price_usd: req.body.price_usd,
+		exchangevolume_usd: req.body.exchangevolume_usd,
+		generatedcoins: req.body.generatedcoins,
 		fees: req.body.fees,
-		activeAddresses: req.body.activeAddresses,
-		averageDifficulty: req.body.averageDifficulty,
-		paymentCount: req.body.paymentCount,
-		medianTxValue: req.body.medianTxValue,
-		medianFee: req.body.medianFee,
-		blockSize: req.body.blockSize,
-		blockCount: req.body.blockCount
+		activeaddresses: req.body.activeaddresses,
+		averagedifficulty: req.body.averagedifficulty,
+		paymentcount: req.body.paymentcount,
+		mediantxvalue_usd: req.body.mediantxvalue_usd,
+		medianFmedianfeeee: req.body.medianfee,
+		blocksize: req.body.blocksize,
+		blockcount: req.body.blockcount
 	};
 
 	// Save Bitcoin in the database
