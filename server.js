@@ -6,10 +6,9 @@ const app = express();
 
 app.use(cors({ origin: '*' }));
 
-global.__basedir = __dirname;
-
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
+global.__basedir = __dirname;
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
