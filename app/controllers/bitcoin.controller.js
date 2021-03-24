@@ -46,6 +46,9 @@ exports.create = (req, res) => {
 
 exports.findAll = (req, res) => {
 	const date = req.query.date;
+	//const generatedcoins = req.query.generatedcoins;
+	//var condition = generatedcoins ? { generatedcoins: { [Op.iLike]: `%${generatedcoins}%` } } : null;
+
 	var condition = date ? { date: { [Op.iLike]: `%${date}%` } } : null;
 
 	Bitcoin.findAll({ where: condition })
