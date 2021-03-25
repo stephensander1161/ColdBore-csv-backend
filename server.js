@@ -53,13 +53,8 @@ var router = require('express').Router();
 app.use('/api/bitcoins', router);
 
 function sendData(socket) {
-	if (x) {
-		socket.emit('data1', Array.from(router.get('/', bitcoins.findAll)));
-		x = !x;
-	} else {
-		socket.emit('data2', Array.from(router.get('/', bitcoins.findAll)));
-		x = !x;
-	}
+	socket.emit('data1', Array.from(router.get('/', bitcoins.findAll)));
+
 	console.log(`data is ${x}`);
 	setTimeout(() => {
 		sendData(socket);
